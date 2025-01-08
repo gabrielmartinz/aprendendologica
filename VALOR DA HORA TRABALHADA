@@ -1,1 +1,38 @@
+import sys #Módulo sys para encerrar a aplicação
 
+
+#Mensagem inicial de apresentação ao usuário
+print ("Você gostaria de saber o valor da sua hora trabalhada?")
+print ("1 - Sim         2 - Não")
+
+
+#Lê a resposta do usuário
+while True:
+    prosseguir = int(input (""))
+
+    if prosseguir == 1:
+     print ("Perfeito, estarei te ajudando a descobrir:")
+     break
+
+    elif prosseguir == 2:
+     print ("Quando quiser saber, estarei disposto para ajudar :)")
+     sys.exit()
+    
+    else:
+     print ("Opção inválida, tente novamente")
+    
+    
+salario = int(input ("Primeiro, preciso que me diga seu salário registrado em carteira: "))
+dias = int(input ("Agora preciso saber quantos dias na semana você trabalha: "))
+hora = int(input ("Por favor, me diga quantas horas por dia você trabalha, lembrando que não contarei o horário de almoço: "))
+
+
+horas = dias * 4 * hora #Cálculo para descobrir as horas trabalhadas no mês
+valor = salario / horas #Cálcula a hora trabalhada
+
+
+print (f"Nesse caso você trabalha {horas} horas por mês e recebe um salário de R${salario} por elas.")
+print (f"Sendo assim, o valor da sua hora trabalhada é de R${valor:.2f}")
+
+#Código escrito no dia 08/01/2025 com a intenção de aprender lógica de programação.
+#Para escrever o código eu usei ajuda do CHAT GPT, porém antes fiz a idéia em um papel de como eu queria que funcionasse

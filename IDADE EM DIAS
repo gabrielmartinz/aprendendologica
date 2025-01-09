@@ -1,0 +1,25 @@
+#ESCREVA UM ALGORITIMO QUE LEIA IDADE DE UMA PESSOA EXPRESSA EM ANOS, MESES E DIAS E ESCREVA A IDADE DESSA PESSOA EXPRESSA EM DIAS, CONSIDERANDO QUE O ANO TEM 365 DIAS E O MÊS TEM 30.
+ 
+print("PARA COMEÇAR, ME INFORME A DATA DE HOJE")
+ANO_HOJE = int(input ("Em qual ano estamos? "))
+MES_HOJE = int(input ("Em qual mês estamos? "))
+DIA_HOJE = int(input ("Em qual dia estamos? "))
+ 
+print("AGORA PRECISO SABER SUA DATA DE NASCIMENTO")
+ANO_NASC =int(input ("Em qual ano você nasceu? "))
+MES_NASC =int(input ("Em qual mês você nasceu? "))
+DIA_NASC =int(input ("Em qual dia você nasceu? "))
+ 
+ANOS = (ANO_HOJE - ANO_NASC) * 365
+
+# Calcular a diferença de meses, levando em conta se o mês de nascimento já passou ou não
+if MES_HOJE >= MES_NASC:
+    MESES = (MES_HOJE - MES_NASC) * 30
+else:
+    MESES = ((MES_HOJE + 12) - MES_NASC) * 30
+MESES = (MES_HOJE - MES_NASC) * 30
+
+DIAS = DIA_HOJE - DIA_NASC
+TOTAL_DIAS = ANOS + MESES + DIAS
+ 
+print (f"Você tem exatos {TOTAL_DIAS} dias desde o seu nascimento")
